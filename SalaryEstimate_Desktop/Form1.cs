@@ -13,7 +13,7 @@ namespace SalaryEstimate_Desktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            hourlyCalc calc = new hourlyCalc();
+            HourlyCalculation calc = new HourlyCalculation();
 
             if (!string.IsNullOrEmpty(hourRate.Text))
             {
@@ -27,10 +27,10 @@ namespace SalaryEstimate_Desktop
                 completeGross = calc.checkCalc(mainAmount).ToString("C", CultureInfo.CurrentCulture);
                 grossAmount.Text = completeGross;
 
-                completeMonth = calc.monthCalc(mainAmount).ToString("C", CultureInfo.CurrentCulture);
+                completeMonth = calc.monthlyCalculation(mainAmount).ToString("C", CultureInfo.CurrentCulture);
                 monthAmount.Text = completeMonth;
 
-                completeYear = calc.yearCalc(mainAmount).ToString("C", CultureInfo.CurrentCulture);
+                completeYear = calc.yearlyCalculation(mainAmount).ToString("C", CultureInfo.CurrentCulture);
                 yearAmount.Text = completeYear;
 
 
@@ -58,7 +58,7 @@ namespace SalaryEstimate_Desktop
         {
             if (!string.IsNullOrEmpty(mainYearAmount.Text))
             {
-                yearlyCalc mainCalc = new yearlyCalc();
+                YearCalculation mainCalc = new YearCalculation();
 
                 double yearAmount = Convert.ToDouble(mainYearAmount.Text);
 
@@ -74,14 +74,10 @@ namespace SalaryEstimate_Desktop
 
                 totalHour = mainCalc.hourlyCalc(yearAmount).ToString("C", CultureInfo.CurrentCulture);
                 mainHourRate.Text = totalHour;
-
-
             }
             else
             {
-
                 mainYearAmount.Focus();
-
             }
         }
 
