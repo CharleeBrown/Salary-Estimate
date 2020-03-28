@@ -7,8 +7,8 @@
         private const double monthsInYear = 12;
         public double checkCalc(double ratePerHour)
         {
-            double grossCheck;
-            grossCheck = ratePerHour * hoursInPaycheck;
+            
+            double grossCheck = ratePerHour * hoursInPaycheck;
 
             return grossCheck;
 

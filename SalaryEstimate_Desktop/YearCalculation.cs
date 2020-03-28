@@ -7,8 +7,8 @@
         private const double hoursInCheck = 80;
         public double monthly(double annualSalary)
         {
-            double monthlySalary;
-            monthlySalary = annualSalary / monthsInYear;
+            
+           double monthlySalary = annualSalary / monthsInYear;
 
             return monthlySalary;
 
