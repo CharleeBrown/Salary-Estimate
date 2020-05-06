@@ -30,13 +30,13 @@ namespace SalaryEstimate_Desktop
                     string completeMonth;
                     string completeYear;
 
-
+                    // Set the text boxes to the calculated amounts. 
                     completeGross = calc.checkCalc(mainAmount).ToString("C", CultureInfo.CurrentCulture);
                     grossAmount.Text = completeGross;
 
                     completeMonth = calc.monthlyCalculation(mainAmount).ToString("C", CultureInfo.CurrentCulture);
                     monthAmount.Text = completeMonth;
-                    
+
                     completeYear = calc.yearlyCalculation(mainAmount).ToString("C", CultureInfo.CurrentCulture);
                     yearAmount.Text = completeYear;
                 }
@@ -49,13 +49,16 @@ namespace SalaryEstimate_Desktop
         }
         private void hourRate_TextChanged(object sender, EventArgs e)
         {
+            // clear all the formatting from the text. 
             string value = hourRate.Text.Replace(",", "").Replace("$", "").Replace(".", "").TrimStart('0');
             decimal ul;
 
-            //Check we are indeed handling a number
+            //parse the text for an integer.
             if (decimal.TryParse(value, out ul))
             {
+                //Divide the number by 100 to get a decimal
                 ul /= 100;
+
                 //Unsub the event so we don't enter a loop
                 hourRate.TextChanged -= hourRate_TextChanged;
 
@@ -76,14 +79,20 @@ namespace SalaryEstimate_Desktop
         }
         private void yearButton_Click(object sender, EventArgs e)
         {
+            // If the string is not null or empty. 
             if (!string.IsNullOrEmpty(mainYearAmount.Text))
             {
                 YearCalculation mainCalc = new YearCalculation();
 
+                // format the text. 
                 double yearAmount = Convert.ToDouble(mainYearAmount.Text.Replace("$", ""));
+
+
                 string totalMonth;
                 string totalCheck;
                 string totalHour;
+
+                // Set the text boxes to the calculated amounts. 
                 totalMonth = mainCalc.monthly(yearAmount).ToString("C", CultureInfo.CurrentCulture);
                 mainMonthAmount.Text = totalMonth;
                 totalCheck = mainCalc.paycheckAmount(yearAmount).ToString("C", CultureInfo.CurrentCulture);
@@ -104,6 +113,7 @@ namespace SalaryEstimate_Desktop
 
         private void mainYearAmount_TextChanged(object sender, EventArgs e)
         {
+            // Remove the formatting. 
             string value = mainYearAmount.Text.Replace(",", "").Replace("$", "").Replace(".", "").TrimStart('0');
             Int32 ul;
             if (Int32.TryParse(value, out ul))
