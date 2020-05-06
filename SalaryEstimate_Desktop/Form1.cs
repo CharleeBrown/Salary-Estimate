@@ -24,22 +24,14 @@ namespace SalaryEstimate_Desktop {
                     string completeMonth;
                     string completeYear;
 
-<<<<<<< HEAD
                     // Set the text boxes to the calculated amounts. 
                     completeGross = calc.checkCalc(mainAmount).ToString("C", CultureInfo.CurrentCulture);
-=======
-                    completeGross = calc.checkCalc (mainAmount).ToString ("C", CultureInfo.CurrentCulture);
->>>>>>> 38db824664fe04ef3e3e0dd49faf3c7cf8137c57
                     grossAmount.Text = completeGross;
 
                     completeMonth = calc.monthlyCalculation (mainAmount).ToString ("C", CultureInfo.CurrentCulture);
                     monthAmount.Text = completeMonth;
 
-<<<<<<< HEAD
                     completeYear = calc.yearlyCalculation(mainAmount).ToString("C", CultureInfo.CurrentCulture);
-=======
-                    completeYear = calc.yearlyCalculation (mainAmount).ToString ("C", CultureInfo.CurrentCulture);
->>>>>>> 38db824664fe04ef3e3e0dd49faf3c7cf8137c57
                     yearAmount.Text = completeYear;
                 }
 
@@ -47,7 +39,6 @@ namespace SalaryEstimate_Desktop {
                 hourRate.Focus ();
             }
         }
-<<<<<<< HEAD
         private void hourRate_TextChanged(object sender, EventArgs e)
         {
             // clear all the formatting from the text. 
@@ -58,14 +49,6 @@ namespace SalaryEstimate_Desktop {
             if (decimal.TryParse(value, out ul))
             {
                 //Divide the number by 100 to get a decimal
-=======
-        private void hourRate_TextChanged (object sender, EventArgs e) {
-            string value = hourRate.Text.Replace (",", "").Replace ("$", "").Replace (".", "").TrimStart ('0');
-            decimal ul;
-
-            //Check we are indeed handling a number
-            if (decimal.TryParse (value, out ul)) {
->>>>>>> 38db824664fe04ef3e3e0dd49faf3c7cf8137c57
                 ul /= 100;
 
                 //Unsub the event so we don't enter a loop
