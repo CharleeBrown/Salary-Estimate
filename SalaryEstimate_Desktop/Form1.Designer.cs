@@ -66,9 +66,10 @@
             // 
             // hourRate
             // 
+            this.hourRate.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hourRate.Location = new System.Drawing.Point(38, 34);
             this.hourRate.Name = "hourRate";
-            this.hourRate.Size = new System.Drawing.Size(112, 20);
+            this.hourRate.Size = new System.Drawing.Size(112, 21);
             this.hourRate.TabIndex = 1;
             this.hourRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.hourRate.TextChanged += new System.EventHandler(this.hourRate_TextChanged);
@@ -84,9 +85,11 @@
             // 
             // grossAmount
             // 
+            this.grossAmount.Enabled = false;
+            this.grossAmount.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grossAmount.Location = new System.Drawing.Point(38, 145);
             this.grossAmount.Name = "grossAmount";
-            this.grossAmount.Size = new System.Drawing.Size(112, 20);
+            this.grossAmount.Size = new System.Drawing.Size(112, 21);
             this.grossAmount.TabIndex = 4;
             this.grossAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -101,9 +104,11 @@
             // 
             // monthAmount
             // 
+            this.monthAmount.Enabled = false;
+            this.monthAmount.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monthAmount.Location = new System.Drawing.Point(38, 206);
             this.monthAmount.Name = "monthAmount";
-            this.monthAmount.Size = new System.Drawing.Size(112, 20);
+            this.monthAmount.Size = new System.Drawing.Size(112, 21);
             this.monthAmount.TabIndex = 6;
             this.monthAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -118,9 +123,11 @@
             // 
             // yearAmount
             // 
+            this.yearAmount.Enabled = false;
+            this.yearAmount.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yearAmount.Location = new System.Drawing.Point(38, 267);
             this.yearAmount.Name = "yearAmount";
-            this.yearAmount.Size = new System.Drawing.Size(112, 20);
+            this.yearAmount.Size = new System.Drawing.Size(112, 21);
             this.yearAmount.TabIndex = 8;
             this.yearAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -203,17 +210,22 @@
             // 
             // mainHourRate
             // 
+            this.mainHourRate.Enabled = false;
+            this.mainHourRate.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainHourRate.Location = new System.Drawing.Point(38, 267);
             this.mainHourRate.Name = "mainHourRate";
-            this.mainHourRate.Size = new System.Drawing.Size(119, 20);
+            this.mainHourRate.Size = new System.Drawing.Size(119, 21);
             this.mainHourRate.TabIndex = 11;
+            this.mainHourRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // mainYearAmount
             // 
+            this.mainYearAmount.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainYearAmount.Location = new System.Drawing.Point(38, 34);
             this.mainYearAmount.Name = "mainYearAmount";
-            this.mainYearAmount.Size = new System.Drawing.Size(119, 20);
+            this.mainYearAmount.Size = new System.Drawing.Size(119, 21);
             this.mainYearAmount.TabIndex = 17;
+            this.mainYearAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mainYearAmount.TextChanged += new System.EventHandler(this.mainYearAmount_TextChanged);
             // 
             // label6
@@ -236,17 +248,23 @@
             // 
             // perCheckAmount
             // 
+            this.perCheckAmount.Enabled = false;
+            this.perCheckAmount.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.perCheckAmount.Location = new System.Drawing.Point(38, 206);
             this.perCheckAmount.Name = "perCheckAmount";
-            this.perCheckAmount.Size = new System.Drawing.Size(119, 20);
+            this.perCheckAmount.Size = new System.Drawing.Size(119, 21);
             this.perCheckAmount.TabIndex = 13;
+            this.perCheckAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // mainMonthAmount
             // 
+            this.mainMonthAmount.Enabled = false;
+            this.mainMonthAmount.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainMonthAmount.Location = new System.Drawing.Point(38, 145);
             this.mainMonthAmount.Name = "mainMonthAmount";
-            this.mainMonthAmount.Size = new System.Drawing.Size(119, 20);
+            this.mainMonthAmount.Size = new System.Drawing.Size(119, 21);
             this.mainMonthAmount.TabIndex = 15;
+            this.mainMonthAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -261,7 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(239, 359);
+            this.ClientSize = new System.Drawing.Size(228, 359);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Paycheck Estimator";
