@@ -17,16 +17,22 @@ namespace SalaryEstimate_Desktop
 
             if (!string.IsNullOrEmpty(hourRate.Text))
             {
-                double mainAmount = Convert.ToDouble(hourRate.Text);
-                string completeGross;
-                string completeMonth;
-                string completeYear;
-                completeGross = calc.checkCalc(mainAmount).ToString("C", CultureInfo.CurrentCulture);
-                grossAmount.Text = completeGross;
-                completeMonth = calc.monthlyCalculation(mainAmount).ToString("C", CultureInfo.CurrentCulture);
-                monthAmount.Text = completeMonth;
-                completeYear = calc.yearlyCalculation(mainAmount).ToString("C", CultureInfo.CurrentCulture);
-                yearAmount.Text = completeYear;
+                var payRate = hourRate.Text.Replace("$", "");
+                decimal result; 
+                if(decimal.TryParse(payRate, out result))
+                {
+                    double mainAmount = Convert.ToDouble(result);
+                    string completeGross;
+                    string completeMonth;
+                    string completeYear;
+                    completeGross = calc.checkCalc(mainAmount).ToString("C", CultureInfo.CurrentCulture);
+                    grossAmount.Text = completeGross;
+                    completeMonth = calc.monthlyCalculation(mainAmount).ToString("C", CultureInfo.CurrentCulture);
+                    monthAmount.Text = completeMonth;
+                    completeYear = calc.yearlyCalculation(mainAmount).ToString("C", CultureInfo.CurrentCulture);
+                    yearAmount.Text = completeYear;
+                }
+                
             }
             else
             {
@@ -35,7 +41,26 @@ namespace SalaryEstimate_Desktop
         }
         private void hourRate_TextChanged(object sender, EventArgs e)
         {
+            string value = hourRate.Text.Replace(",", "").Replace("$", "").Replace(".", "").TrimStart('0');
+            decimal ul;
 
+            //Check we are indeed handling a number
+            if (decimal.TryParse(value, out ul))
+            {
+                ul /= 100;
+                //Unsub the event so we don't enter a loop
+                hourRate.TextChanged -= hourRate_TextChanged;
+
+                //Format the text as currency
+                hourRate.Text = string.Format(CultureInfo.CreateSpecificCulture("en-US"), "{0:C2}", ul);
+
+                // Subscribe to event
+                hourRate.TextChanged += hourRate_TextChanged;
+
+                // Select end of the string. 
+                hourRate.Select(hourRate.Text.Length, 0);
+            }
+            
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -46,7 +71,8 @@ namespace SalaryEstimate_Desktop
             if (!string.IsNullOrEmpty(mainYearAmount.Text))
             {
                 YearCalculation mainCalc = new YearCalculation();
-                double yearAmount = Convert.ToDouble(mainYearAmount.Text);
+
+                double yearAmount = Convert.ToDouble(mainYearAmount.Text.Replace("$", ""));
                 string totalMonth;
                 string totalCheck;
                 string totalHour;
@@ -66,6 +92,27 @@ namespace SalaryEstimate_Desktop
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void mainYearAmount_TextChanged(object sender, EventArgs e)
+        {
+            string value = mainYearAmount.Text.Replace(",", "").Replace("$", "").Replace(".", "").TrimStart('0');
+            Int32 ul;
+            if (Int32.TryParse(value, out ul))
+            {
+                
+                //Unsub the event so we don't enter a loop
+                mainYearAmount.TextChanged -= mainYearAmount_TextChanged;
+
+                //Format the text as currency
+                mainYearAmount.Text = string.Format(CultureInfo.CreateSpecificCulture("en-US"), "{0:C0}", ul);
+
+                // Subscribe to event
+                mainYearAmount.TextChanged += mainYearAmount_TextChanged;
+
+                // Select end of the string. 
+                mainYearAmount.Select(mainYearAmount.Text.Length, 0);
+            }
         }
     }
 
