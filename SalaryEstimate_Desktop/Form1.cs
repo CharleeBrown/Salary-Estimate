@@ -85,25 +85,6 @@ namespace SalaryEstimate_Desktop {
         private void Form1_Load (object sender, EventArgs e) {
 
         }
-<<<<<<< HEAD
-        private void yearButton_Click(object sender, EventArgs e)
-        {
-            // If the string is not null or empty. 
-            if (!string.IsNullOrEmpty(mainYearAmount.Text))
-            {
-                YearCalculation mainCalc = new YearCalculation();
-
-                // format the text. 
-                double yearAmount = Convert.ToDouble(mainYearAmount.Text.Replace("$", ""));
-
-
-                string totalMonth;
-                string totalCheck;
-                string totalHour;
-
-                // Set the text boxes to the calculated amounts. 
-                totalMonth = mainCalc.monthly(yearAmount).ToString("C", CultureInfo.CurrentCulture);
-=======
         private void yearButton_Click (object sender, EventArgs e) {
             if (!string.IsNullOrEmpty (mainYearAmount.Text)) {
                 YearCalculation mainCalc = new YearCalculation ();
@@ -113,7 +94,6 @@ namespace SalaryEstimate_Desktop {
                 string totalCheck;
                 string totalHour;
                 totalMonth = mainCalc.monthly (yearAmount).ToString ("C", CultureInfo.CurrentCulture);
->>>>>>> 38db824664fe04ef3e3e0dd49faf3c7cf8137c57
                 mainMonthAmount.Text = totalMonth;
                 totalCheck = mainCalc.paycheckAmount (yearAmount).ToString ("C", CultureInfo.CurrentCulture);
                 perCheckAmount.Text = totalCheck;
@@ -128,15 +108,8 @@ namespace SalaryEstimate_Desktop {
 
         }
 
-<<<<<<< HEAD
-        private void mainYearAmount_TextChanged(object sender, EventArgs e)
-        {
-            // Remove the formatting. 
-            string value = mainYearAmount.Text.Replace(",", "").Replace("$", "").Replace(".", "").TrimStart('0');
-=======
         private void mainYearAmount_TextChanged (object sender, EventArgs e) {
             string value = mainYearAmount.Text.Replace (",", "").Replace ("$", "").Replace (".", "").TrimStart ('0');
->>>>>>> 38db824664fe04ef3e3e0dd49faf3c7cf8137c57
             Int32 ul;
             if (Int32.TryParse (value, out ul)) {
 
