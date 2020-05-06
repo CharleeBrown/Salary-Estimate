@@ -17,18 +17,26 @@ namespace SalaryEstimate_Desktop
 
             if (!string.IsNullOrEmpty(hourRate.Text))
             {
+                // Setting the currency formatting. 
                 var payRate = hourRate.Text.Replace("$", "");
                 decimal result; 
+
+                // If the string parses successfuly. 
                 if(decimal.TryParse(payRate, out result))
                 {
+                    // Set the output to the mainAmount variable. 
                     double mainAmount = Convert.ToDouble(result);
                     string completeGross;
                     string completeMonth;
                     string completeYear;
+
+
                     completeGross = calc.checkCalc(mainAmount).ToString("C", CultureInfo.CurrentCulture);
                     grossAmount.Text = completeGross;
+
                     completeMonth = calc.monthlyCalculation(mainAmount).ToString("C", CultureInfo.CurrentCulture);
                     monthAmount.Text = completeMonth;
+                    
                     completeYear = calc.yearlyCalculation(mainAmount).ToString("C", CultureInfo.CurrentCulture);
                     yearAmount.Text = completeYear;
                 }
