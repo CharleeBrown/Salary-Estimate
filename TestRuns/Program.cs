@@ -4,9 +4,15 @@
     {
         static void Main(string[] args)
         {
-            HourlyCalcTest tests = new HourlyCalcTest();
+            Tests.HourlyCalcTest tests = new Tests.HourlyCalcTest();
+            
+            Tests.YearCalcTests yearTest = new Tests.YearCalcTests();
             tests.CorrectHourlyTest();
             tests.IncorrectHourlyTest();
+
+            yearTest.CorrectYearlyTest();
+            yearTest.IncorrectYearlyTest();
+            
 
         }
     }

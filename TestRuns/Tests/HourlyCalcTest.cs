@@ -1,6 +1,8 @@
 ﻿using SalaryEstimate_Desktop;
 using System;
-namespace TestRuns
+
+
+namespace TestRuns.Tests
 {
     class HourlyCalcTest
     {

@@ -6,6 +6,8 @@
         private const double monthsInYear = 12;
         private const double checksInMonth = 2;
         private const double hoursInCheck = 80;
+
+
         // Method to calculate the gross amount in a month. 
         public double monthly(double annualSalary)
         {
@@ -13,6 +15,7 @@
 
             return monthlySalary;
         }
+
 
         // Method to calculate the amount in a paycheck. 
         // The yearly salary divided by the months in a year. Divided by checks in a month. 
