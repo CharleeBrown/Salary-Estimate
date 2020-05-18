@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SalaryEstimate_Desktop
 {
@@ -19,7 +15,7 @@ namespace SalaryEstimate_Desktop
             double expectedPay = 800.00;
             HourlyCalculation cals = new HourlyCalculation();
 
-            if(cals.checkCalc(rate) == expectedPay)
+            if (cals.checkCalc(rate) == expectedPay)
             {
                 Console.WriteLine("Correct");
 
@@ -31,12 +27,12 @@ namespace SalaryEstimate_Desktop
 
         }
 
-           
-        }
+
+    }
 
 
-                
-        
-    
-    
+
+
+
+
 }

@@ -1,23 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SalaryEstimate_Desktop;
+﻿using SalaryEstimate_Desktop;
+using System;
 namespace TestRuns
 {
-    class TestsOne
+    class HourlyCalcTest
     {
+        // Constant variables from the main class. 
         private const double hoursInPaycheck = 80;
         private const double checksInMonth = 2;
         private const double monthsInYear = 12;
         HourlyCalculation cals = new HourlyCalculation();
 
-        public void HourlyTests()
+
+        public void CorrectHourlyTest()
         {
+            // This test should come up as correct. 
             double rate = 10.00;
             double expectedPay = 800.00;
-            
+
 
             if (cals.checkCalc(rate) == expectedPay)
             {
@@ -32,12 +31,13 @@ namespace TestRuns
             Console.ReadLine();
         }
 
-        public void IncorrectTest()
+        public void IncorrectHourlyTest()
         {
+            // This test should come up as incorrect. 
             double rate = 20.00;
             double expectedPay = 800.00;
 
-            // Should come up as incorrect. 
+
             if (cals.checkCalc(rate) == expectedPay)
             {
                 Console.WriteLine("Correct the expected number was {0}, and the calculated number was {1}", expectedPay, cals.checkCalc(rate));
