@@ -1,4 +1,9 @@
-﻿namespace SalaryEstimate_Desktop {
+﻿using System;
+using System.Globalization;
+using System.Windows.Forms;
+
+
+namespace SalaryEstimate_Desktop {
     public class HourlyCalculation {
         // Variables for pay hours, check amounts and months. 
         private const double hoursInPaycheck = 80;
