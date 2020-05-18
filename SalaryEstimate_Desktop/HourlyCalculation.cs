@@ -7,6 +7,7 @@
         private const double checksInMonth = 2;
         private const double monthsInYear = 12;
 
+
         // Method to get the gross amount in a check. 
         public double checkCalc(double ratePerHour)
         {
