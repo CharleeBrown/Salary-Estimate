@@ -11,9 +11,11 @@ namespace SalaryEstimate_Desktop
         [STAThread]
         static void Main()
         {
+            TestsOne tests = new TestsOne();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+        
         }
     }
 }
