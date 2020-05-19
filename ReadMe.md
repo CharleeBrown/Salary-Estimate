@@ -6,4 +6,4 @@ SalaryCalc
 
 #### During job searching, I use this to quickly calculate back and forth, depending on the amount listed. 
 
-![Hourly Image](https://github.com/CharleeBrown/Salary-Estimate/blob/master/Images/YearlyImage.PNG)
+!(https://github.com/CharleeBrown/Salary-Estimate/blob/master/Images/YearlyImage.PNG)
