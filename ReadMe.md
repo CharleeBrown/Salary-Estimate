@@ -6,7 +6,7 @@ SalaryCalc
 
 #### During job searching, I use this to quickly calculate back and forth, depending on the amount listed. 
 
- Annual Salary to Hourly.        |  Hourly rate to Annual Salary.
----------------------------------|----------------------------------
-![Yearly Salary Calculation](https://github.com/CharleeBrown/Salary-Estimate/blob/master/Images/YearlyImage.PNG)| ![Hourly Salary Calculation](https://github.com/CharleeBrown/Salary-Estimate/blob/master/Images/HourlyImage.PNG)
+ Annual Salary to Hourly.        | | Hourly rate to Annual Salary.
+---------------------------------|-|----------------------------------
+![Yearly Salary Calculation](https://github.com/CharleeBrown/Salary-Estimate/blob/master/Images/YearlyImage.PNG)|| ![Hourly Salary Calculation](https://github.com/CharleeBrown/Salary-Estimate/blob/master/Images/HourlyImage.PNG)
 
