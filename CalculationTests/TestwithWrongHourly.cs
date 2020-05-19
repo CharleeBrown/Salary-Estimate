@@ -46,4 +46,43 @@ namespace CalculationTests
      
         
     }
+
+    [TestClass]
+    public class TestYearly
+    {
+        // Constant variables from the main class. 
+        private const double monthsInYear = 12;
+        private const double checksInMonth = 2;
+        private const double hoursInCheck = 80;
+
+
+        YearCalculation yearly = new YearCalculation();
+
+        [TestMethod]
+        public void CorrectYearlyTest()
+        {
+            int Salary = 30000;
+
+            int expected = 2500;
+            double actual = yearly.monthly(Salary);
+            Assert.AreEqual(expected, actual,  "Incorrect Salary"); 
+
+        }
+
+        [TestMethod]
+        public void IncorrectYearlyTest()
+        {
+            // This test should come up as incorrect. 
+
+            int Salary = 30000;
+
+            int expected= 2600;
+            double actual = yearly.monthly(Salary);
+
+            Assert.AreNotEqual(expected, actual, "Wrong Salary Amount");
+
+
+           
+        }
+    }
 }
