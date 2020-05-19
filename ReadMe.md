@@ -1,4 +1,4 @@
-SalaryCalc 
+SalaryCalc
 ==========
 
 #### An application that will calculate your pay as either an hourly rate or a yearly salary. 
