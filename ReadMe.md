@@ -8,5 +8,5 @@ SalaryCalc
 
 Here is an example of a yearly Salary broken down to hourly. |Here is an example hourly to annual Salary
 -------------------------------------------------------------|------------------------------------------
-![Yearly Salary Calculation](https://github.com/CharleeBrown/Salary-Estimate/blob/master/Images/YearlyImage.PNG)|![Hourly Salary Calculation](https://github.com/CharleeBrown/Salary-Estimate/blob/master/Images/HourlyImage.PNG
+![Yearly Salary Calculation](https://github.com/CharleeBrown/Salary-Estimate/blob/master/Images/YearlyImage.PNG)| ![Hourly Salary Calculation](https://github.com/CharleeBrown/Salary-Estimate/blob/master/Images/HourlyImage.PNG)
 
